@@ -27,7 +27,7 @@ Open ``config.yml`` and update it with the correct information.
 2. Open the inspector by pressing F12 or ctrl + shift + i
 3. Click the “Network” tab
 4. Locate an entry called “science” and click on it
-5. Locate “Response Headers” and copy the value found at “authorization”. That is your token.
+5. Locate “Request Headers” and copy the value found at “authorization”. That is your token.
 
 ### Retrieving Channel ID (field: ``channel``)
 1. Open Discord user settings > Advanced > Turn on Developer Mode
