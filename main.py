@@ -2,7 +2,6 @@ import requests, time, yaml
 
 class App():
 	def __init__(self):
-		self.frame = 0
 		config_file = open("config.yml")
 		config_file = yaml.load(config_file, Loader = yaml.FullLoader)
 		config_file = config_file["vars"]
@@ -12,7 +11,8 @@ class App():
 		}
 		self.prefix = config_file["prefix"]
 		self.channel = "https://discord.com/api/v9/channels/{}/messages".format(config_file["channel"])
-		self.arena = config_file["arena"]
+		self.arena = (config_file["arena"].lower() == 'y')
+		self.frame = 0
 
 	def run(self):
 		while True:
